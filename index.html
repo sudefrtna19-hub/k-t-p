@@ -13,8 +13,10 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
         }
         h1 {
             color: #d81b60;
@@ -31,31 +33,43 @@
             gap: 20px;
             justify-content: center;
             flex-wrap: wrap;
+            max-width: 800px;
         }
         .btn {
             background-color: #ff4081;
             color: white;
             text-decoration: none;
             padding: 20px 40px;
-            font-size: 1.5em;
+            font-size: 1.3em;
             border-radius: 15px;
             border: none;
             cursor: pointer;
             transition: transform 0.3s;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            font-weight: bold;
         }
         .btn:hover {
             transform: scale(1.05); /* Fare ile üzerine gelince hafif büyür */
             background-color: #f50057;
         }
+        /* Oyun butonu için farklı bir renk yapalım ki dikkat çeksin */
+        .btn-oyun {
+            background-color: #ff9800;
+        }
+        .btn-oyun:hover {
+            background-color: #e65100;
+        }
     </style>
 </head>
 <body>
-    <h1>İyi ki Doğdun! 🎂</h1>
-    <p>Senin için özel bir hediye hazırladım. Lütfen bir kapı seç:</p>
+    <h1>İyi ki Doğdun Kuzen! 🎂</h1>
+    <p>Senin için özel bir hediye hazırladım. Lütfen birini seç:</p>
+    
     <div class="container">
         <a href="gecmis.html" class="btn">🕰️ Geçmişe Bir Bakış</a>
         <a href="gelecek.html" class="btn">🚀 Geleceğe Giden Yollar</a>
+        <!-- İŞTE YENİ OYUN BUTONUMUZ -->
+        <a href="oyun.html" class="btn btn-oyun">🎂 Doğum Günü Pastanı Yap!</a>
     </div>
 </body>
 </html>
