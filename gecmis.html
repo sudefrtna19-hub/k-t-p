@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geçmişe Bir Bakış</title>
+    <style>
+        body {
+            background-color: #fff0f5; /* Çok açık tatlı bir pembe */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+        }
+        h1 {
+            color: #d81b60;
+            font-size: 2.5em;
+        }
+        p.subtitle {
+            color: #880e4f;
+            font-size: 1.2em;
+            margin-bottom: 40px;
+        }
+        /* Polaroid Fotoğraf Tasarımı */
+        .polaroid {
+            background: white;
+            padding: 15px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            max-width: 300px;
+            margin: 0 auto 30px auto; /* Ortalamak ve aralık bırakmak için */
+            border-radius: 5px;
+            transform: rotate(-2deg); /* Hafif eğik, doğal bir görünüm */
+            transition: transform 0.3s;
+        }
+        /* İkinci fotoğrafı ters yöne eğelim ki dağınık dursun */
+        .polaroid:nth-child(even) {
+            transform: rotate(3deg);
+        }
+        .polaroid:hover {
+            transform: scale(1.05); /* Üzerine gelince düzleşir ve büyür */
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
+            z-index: 10;
+        }
+        .polaroid img {
+            width: 100%;
+            border-radius: 3px;
+        }
+        .polaroid h3 {
+            color: #333;
+            font-size: 1.2em;
+            margin: 15px 0 5px 0;
+        }
+        .polaroid p {
+            color: #666;
+            font-size: 0.9em;
+            margin: 0;
+        }
+        .back-btn {
+            display: inline-block;
+            background-color: #ff4081;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Nereden Nereye... 📸</h1>
+    <p class="subtitle">Birlikte biriktirdiğimiz o kadar çok anı var ki!</p>
+
+    <!-- 1. ANINIZ -->
+    <div class="polaroid">
+        <!-- foto1.jpg yazan yere kendi fotoğrafının adını yazmalısın -->
+        <img src="foto1.jpg" alt="Anı 1">
+        <h3>Çıktığımız sayısız kahve date'lerinden sadece biri</h3>
+        <p>Henüz ice americanonun tadını almadığımız günler...</p>
+    </div>
+
+    <!-- 2. ANINIZ -->
+    <div class="polaroid">
+        <img src="foto2.jpg" alt="Anı 2">
+        <h3>dg kızı</h3>
+        <p>Doğum gününü sana çaktırmadan kutlayabildiğim o mistik gece</p>
+    </div>
+
+    <!-- 3. ANINIZ -->
+    <div class="polaroid">
+        <img src="foto3.jpg" alt="Anı 3">
+        <h3>Yine bir gün kapında pastayla belirmişim</h3>
+        <p>Hemen dg kızıyla bir foto</p>
+    </div>
+
+    <!-- Geri Dön Butonu -->
+    <a href="index.html" class="back-btn">⬅️ Ana Sayfaya Dön</a>
+
+</body>
+</html>

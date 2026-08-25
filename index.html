@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sürpriz Hediye!</title>
+    <style>
+        body {
+            background-color: #fce4ec; /* Tatlı bir pembe arka plan */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        h1 {
+            color: #d81b60;
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+        p {
+            color: #880e4f;
+            font-size: 1.2em;
+            margin-bottom: 40px;
+        }
+        .container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .btn {
+            background-color: #ff4081;
+            color: white;
+            text-decoration: none;
+            padding: 20px 40px;
+            font-size: 1.5em;
+            border-radius: 15px;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.3s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .btn:hover {
+            transform: scale(1.05); /* Fare ile üzerine gelince hafif büyür */
+            background-color: #f50057;
+        }
+    </style>
+</head>
+<body>
+    <h1>İyi ki Doğdun! 🎂</h1>
+    <p>Senin için özel bir hediye hazırladım. Lütfen bir kapı seç:</p>
+    <div class="container">
+        <a href="gecmis.html" class="btn">🕰️ Geçmişe Bir Bakış</a>
+        <a href="gelecek.html" class="btn">🚀 Geleceğe Giden Yollar</a>
+    </div>
+</body>
+</html>

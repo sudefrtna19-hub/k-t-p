@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geleceğe Giden Yollar</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 30px;
+            box-sizing: border-box;
+            color: #333;
+        }
+        h1 {
+            color: #ff4081;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        p.subtitle {
+            color: #666;
+            font-size: 1.2em;
+            margin-bottom: 40px;
+        }
+        
+        /* Kehanet Bölümü Tasarımı */
+        .kehanet-box {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            max-width: 500px;
+            margin: 0 auto 40px auto;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            border-top: 5px solid #9c27b0;
+        }
+        .kehanet-box h2 {
+            margin-top: 0;
+            color: #9c27b0;
+        }
+        .kehanet-btn {
+            background-color: #9c27b0;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.1em;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: 0.3s;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .kehanet-btn:hover {
+            background-color: #7b1fa2;
+            transform: scale(1.05);
+        }
+        #kehanetSonuc {
+            font-size: 1.3em;
+            font-style: italic;
+            color: #d81b60;
+            min-height: 60px; /* Yazı değişince sayfa zıplamasın diye */
+            font-weight: bold;
+        }
+
+        /* Bucket List Bölümü Tasarımı */
+        .bucket-list {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            max-width: 500px;
+            margin: 0 auto;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            border-top: 5px solid #00bcd4;
+            text-align: left;
+        }
+        .bucket-list h2 {
+            text-align: center;
+            margin-top: 0;
+            color: #00bcd4;
+            margin-bottom: 25px;
+        }
+        .checklist-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 8px;
+            transition: background 0.2s;
+        }
+        .checklist-item:hover {
+            background-color: #e0f7fa;
+        }
+        /* Özel Checkbox Tasarımı */
+        input[type="checkbox"] {
+            width: 25px;
+            height: 25px;
+            margin-right: 15px;
+            cursor: pointer;
+            accent-color: #00bcd4; /* Seçilince turkuaz olur */
+        }
+        
+        .back-btn {
+            display: inline-block;
+            background-color: #ff4081;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 10px;
+            margin-top: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .back-btn:hover {
+            background-color: #d81b60;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Gelecek Seni Bekliyor! 🚀</h1>
+    <p class="subtitle">Bu yıl başımıza neler gelecek bakalım...</p>
+
+    <!-- KEHANET JENERATÖRÜ BÖLÜMÜ -->
+    <div class="kehanet-box">
+        <h2>🔮 Yeni Yaş Kehanetleri</h2>
+        <p>Aşağıdaki butona tıkla ve kaderinle yüzleş...</p>
+        <button class="kehanet-btn" onclick="kehanetUret()">Geleceğimi Göster!</button>
+        <p id="kehanetSonuc">✨</p>
+    </div>
+
+    <!-- BUCKET LIST BÖLÜMÜ -->
+    <div class="bucket-list">
+        <h2>✨ Beraber Yapılacaklar Listesi</h2>
+        
+        <label class="checklist-item">
+            <input type="checkbox"> 
+            Ansızın bir yerlere gitmek ve yeni overthink mekanlarımızı belirlemek
+        </label>
+        
+        <label class="checklist-item">
+            <input type="checkbox"> 
+            Sabahtan akşama kadar oturup en derin dedikoduları yapmak ☕
+        </label>
+        
+        <label class="checklist-item">
+            <input type="checkbox"> 
+            Kerimcan Durmaz konserinde bütün gün göt sallayıp eğlenmek 🎪
+        </label>
+        
+        <label class="checklist-item">
+            <input type="checkbox"> 
+            Trendyol'da beğendiğimiz ama almadığımız o sepeti sonunda acımadan onaylamak 🛍️
+        </label>
+
+        <label class="checklist-item">
+            <input type="checkbox"> 
+            Yemeksepeti'nden gece yarısı krizine girip dev bir sipariş vermek 🍕
+        </label>
+    </div>
+
+    <a href="index.html" class="back-btn">⬅️ Ana Sayfaya Dön</a>
+
+    <!-- Kehanetleri Çalıştıran Kod -->
+    <script>
+        const kehanetler = [
+            "Bu yıl Trendyol'da sepette unuttuğun o ürün şok bir indirime girecek ve anında kapacaksın!",
+            "Yakın zamanda Yemeksepeti kuryesi siparişini ışık hızında getirecek.",
+            "Bir sabah uyandığında altına sıçtığını fark edeceksin.",
+            "Birlikte yapacağımız tatilde telefonların şarjı hiç bitmeyecek!",
+            "Beklenmedik bir anda hesabına para yatacak ve onu tamamen online alışverişe harcayacaksın.",
+            "Bu yıl, girdiğin her ortamda en iyi giyinen kişi sen olacaksın.",
+            "Çok yakında komik bir tesadüf eseri harika bir maceranın tam ortasına düşeceksin!"
+        ];
+
+        function kehanetUret() {
+            // Rastgele bir sayı seçip o sayıdaki kehaneti ekrana yazdırır
+            const rastgeleSayi = Math.floor(Math.random() * kehanetler.length);
+            const sonucEkrani = document.getElementById("kehanetSonuc");
+            
+            // Ufak bir animasyon hissi vermek için önce yükleniyor gibi yapalım
+            sonucEkrani.style.opacity = 0;
+            setTimeout(() => {
+                sonucEkrani.innerText = "✨ " + kehanetler[rastgeleSayi] + " ✨";
+                sonucEkrani.style.opacity = 1;
+            }, 200);
+        }
+    </script>
+</body>
+</html>
